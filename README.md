@@ -1,4 +1,4 @@
-# 🤖 Magnum Bot — Advanced Discord Bot Showcase
+# 🤖 Magnum Bot — Advanced Discord Bot
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Go%20(Golang)-00ADD8?style=for-the-badge&logo=go" alt="Go Language">
@@ -8,73 +8,71 @@
 
 ---
 
-> **⚠️ NOTE: This repository serves as a showcase.**
-> It contains the professional documentation and visual assets for the **Magnum Bot** project. The full source code is maintained in a private repository to protect intellectual property. This project demonstrates advanced backend architecture, concurrency management, and real-time graphics rendering using **Go**.
+> [!IMPORTANT]
+> **NOTE: This repository is a showcase.**
+> It contains professional documentation and visual assets for the **Magnum Bot** project. The full source code is maintained in a private repository to protect intellectual property. This project demonstrates advanced backend architecture, concurrency management, and real-time graphics rendering using **Go**.
 
 ---
 
 ## 📖 Project Overview
 
-Magnum Bot is a robust, modular Discord application designed for high-performance server management and engagement. It features a custom-built economy engine, a sophisticated multiplayer minigame framework, and a real-time image processing system for user profiles.
+Magnum Bot is a robust, modular Discord application designed for high-performance server management and user engagement. It features a custom-built economy engine, a sophisticated multiplayer minigames platform, and a real-time image processing system for user profiles.
 
-## ✨ Technical Highlights & Features
+## ✨ Technical Features and Capabilities
 
 ### 🖼️ Dynamic Visual Profiles
-The bot features a highly advanced profile system that generates **high-quality, customized HD images** on-the-fly.
-* **2D Rendering Engine:** Built natively using the `fogleman/gg` rendering library.
+The bot features an advanced profile system that generates **high-quality personalized HD images** on-the-fly.
+* **2D Rendering Engine:** Built natively using the `fogleman/gg` library.
 * **Dynamic Data Injection:** Fetches live user statistics, Discord avatars, and social links, rendering them into a custom HD buffer.
 * **Custom Typography:** Implements dynamic text alignment and custom TTF font rendering.
 
+---
+
+### 🎵 Music Activity (Discord Embedded)
+A full-featured music player operating as a Discord Activity. ✨
+
+* **⚡ Interface:** Minimalist and modern design.
+* **🔍 Controls:** Instant track search and intuitive playback controls.
+* **📜 Queue:** Simple playback queue management system.
+
 <p align="center">
-  <img src="docs/profile_showcase.png" width="90%" alt="Visual Profile Showcase" style="border-radius: 10px; border: 2px solid #333;">
-  <br><em>HD Profile generated dynamically with real-time user data.</em>
+  <img src="docs/music_player.png" width="90%" alt="Music Player Interface" style="border-radius: 10px; border: 2px solid #333;">
+  <br><em>Sleek and modern Music Player interface.</em>
 </p>
 
 ---
 
-### 💰 Economy & Casino Ecosystem
-A complete, transaction-safe economy solution with a rich interactive interface.
-* **Games Suite:** Includes Mines (with cashout), Lucky Jet (Crash), Blackjack, Coinflip, and **🎰 Slots (3-reel and 5-reel)**.
+### 💰 Economy and Casino Ecosystem
+A complete, transaction-safe economy solution with a rich interactive interface. 🎰
+
+* **Games Suite:** Includes Mines (with cashout), Lucky Jet (Crash), Blackjack, Coinflip, and **Slots (3-reel and 5-reel)**.
 * **Concurrency Control:** Uses strict `sync.Mutex` locks to ensure balance integrity during high-frequency gaming sessions.
-
-<p align="center">
-  <img src="docs/casino_menu.png" width="47%" alt="Casino Main Menu">
-  <img src="docs/mines_game.png" width="47%" alt="Mines Game Session">
-  <br><em>Main Casino Menu and an active Mines session.</em>
-</p>
-
-<p align="center">
-  <img src="docs/game_slots.png" width="47%" alt="Slots UI">
-  <img src="docs/successful_spin.png" width="47%" alt="Successful Slots Win">
-  <br><em>Interactive 3-reel slots and a winning spin result.</em>
-</p>
 
 ---
 
 ### 🎮 Multiplayer Minigames & Scoring
-A robust framework for both single-player and multiplayer sessions with a global ranking system.
-* **Global Leaderboard:** A top-10 player ranking system powered by SQLite and GORM.
-* **Featured Games:** * **Spy (Шпион):** Social deduction game with hidden roles distributed via DMs and case-insensitive guessing.
-    * **Russian Roulette:** Features real-time drum mechanics and turn-based PvP/AI modes.
-    * **Classics:** Fully interactive Tic-Tac-Toe and Hangman sessions.
+A robust platform for both single-player and multiplayer sessions with a global ranking system. 🏆
 
-<p align="center">
-  <img src="docs/minigames_menu.png" width="47%" alt="Minigames Menu">
-  <img src="docs/leaderboard_menu.png" width="47%" alt="Global Points Leaderboard">
-  <br><em>Minigames interaction menu and the global leaderboard.</em>
-</p>
+* **Global Leaderboard:** A top-10 player ranking system powered by SQLite and GORM.
+* **Featured Games:**
+    * **🕵️‍♂️ Spy:** A social deduction game with hidden roles distributed via DMs and case-insensitive guessing.
+    * **🔫 Russian Roulette:** Features real-time drum mechanics and turn-based PvP/AI modes.
+    * **🕹️ Classics:** Fully interactive Tic-Tac-Toe and Hangman sessions.
 
 ---
 
-### 🛠️ Admin & Management Suite
-Powerful tools designed for administrators to manage the economy and investigate user activity.
-* **Member Control:** Adjust balances, issue tools, and view detailed user stats.
-* **Rig Menu (Подкрутка):** Hidden debug/admin tools to manage economy multipliers and game probabilities.
+### 🛡️ Core Reliability and UX
+
+* **🎭 Reaction Roles:** A modular high-performance role distribution system via customized embed messages and server-side reaction listeners.
+* **🧹 Role Hygiene:** An automated system for cleaning up level-up rewards, ensuring users maintain a clean profile with only their highest earned level.
+* **🚀 Latency Resolution:** Optimized internal network routing via IPv4 (127.0.0.1) for zero-latency audio playback.
 
 <p align="center">
-  <img src="docs/admin_menu.png" width="75%" alt="Admin Member Management Panel" style="border-radius: 10px; border: 1px solid #555;">
-  <br><em>Comprehensive Admin Panel for economy and member management.</em>
+  <img src="docs/emoji.png" width="75%" alt="Reaction Roles Showcase" style="border-radius: 10px; border: 1px solid #555;">
+  <br><em>Reaction Roles module with emoji-based selection.</em>
 </p>
+
+---
 
 ## 🏗️ Project Architecture
 
@@ -91,19 +89,17 @@ The project follows a clean, domain-driven structure to ensure maintainability:
 ```
 
 ## 🛠️ Tech Stack
-Language: Go (Golang) — chosen for its superior concurrency primitives.
 
-* API Wrapper: Disgo.
+* **Language:** Go (Golang) — chosen for its superior concurrency primitives.
+* **🤖 API Wrapper:** Disgo.
+* **💾 Database:** SQLite with GORM (Object-Relational Mapping).
+* **🎨 Graphics:** fogleman/gg (Pure Go 2D rendering).
+* **🎵 Audio:** Lavalink integration for high-quality streaming.
 
-* Database: SQLite with GORM (Object-Relational Mapping).
-
-* Graphics: fogleman/gg (Pure Go 2D rendering).
-
-* Audio: Lavalink integration for high-quality streaming.
+---
 
 ## 📬 Contact Information
-* GitHub: @mchbkv
 
-* Discord: mchbkv
-
-* Email: mchbkv@proton.me
+* **GitHub:** [@mchbkv](https://github.com/mchbkv)
+* **Discord:** `mchbkv`
+* **Email:** [mchbkv@proton.me](mailto:mchbkv@proton.me)
