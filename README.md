@@ -18,65 +18,77 @@
 
 Magnum Bot is a robust, modular Discord application designed for high-performance server management and user engagement. It features a custom-built economy engine, a sophisticated multiplayer minigames platform, and a real-time image processing system for user profiles.
 
-## ✨ Technical Features and Capabilities
+---
+
+## ✨ Features Showcase
 
 ### 🖼️ Dynamic Visual Profiles
 The bot features an advanced profile system that generates **high-quality personalized HD images** on-the-fly.
 * **2D Rendering Engine:** Built natively using the `fogleman/gg` library.
-* **Dynamic Data Injection:** Fetches live user statistics, Discord avatars, and social links, rendering them into a custom HD buffer.
-* **Custom Typography:** Implements dynamic text alignment and custom TTF font rendering.
+* **Dynamic Data Injection:** Fetches live user stats and avatars.
+
+<p align="center">
+  <img src="docs/profile_showcase.png" width="90%" alt="Profile Showcase" style="border-radius: 10px; border: 2px solid #333;">
+  <br><em>Custom HD Profile rendering engine.</em>
+</p>
+
+---
+
+### 💰 Economy & Casino Ecosystem
+A transaction-safe economy solution with a rich interactive interface. Featuring strict `sync.Mutex` locks for data integrity.
+
+<p align="center">
+  <img src="docs/casino_menu.png" width="45%" alt="Casino Menu">
+  <img src="docs/mines_game.png" width="45%" alt="Mines Game">
+  <br>
+  <img src="docs/game_slots.png" width="45%" alt="Slots Game">
+  <img src="docs/successful_spin.png" width="45%" alt="Slot Win">
+</p>
+
+* **Games Suite:** Mines (with cashout), Lucky Jet (Crash), Blackjack, and **Slots (3-reel & 5-reel)**.
+* **Interactive Modals:** Real-time feedback and smooth interaction states.
 
 ---
 
 ### 🎵 Music Activity (Discord Embedded)
-A full-featured music player operating as a Discord Activity. ✨
-
-* **⚡ Interface:** Minimalist and modern design.
-* **🔍 Controls:** Instant track search and intuitive playback controls.
-* **📜 Queue:** Simple playback queue management system.
+A full-featured music player operating as a Discord Activity with minimalist design. ✨
 
 <p align="center">
   <img src="docs/music_player.png" width="90%" alt="Music Player Interface" style="border-radius: 10px; border: 2px solid #333;">
-  <br><em>Sleek and modern Music Player interface.</em>
 </p>
 
----
-
-### 💰 Economy and Casino Ecosystem
-A complete, transaction-safe economy solution with a rich interactive interface. 🎰
-
-* **Games Suite:** Includes Mines (with cashout), Lucky Jet (Crash), Blackjack, Coinflip, and **Slots (3-reel and 5-reel)**.
-* **Concurrency Control:** Uses strict `sync.Mutex` locks to ensure balance integrity during high-frequency gaming sessions.
+* **⚡ Interface:** Instant track search and intuitive playback controls.
+* **🚀 Zero Latency:** Optimized internal routing via 127.0.0.1.
 
 ---
 
-### 🎮 Multiplayer Minigames & Scoring
-A robust platform for both single-player and multiplayer sessions with a global ranking system. 🏆
-
-* **Global Leaderboard:** A top-10 player ranking system powered by SQLite and GORM.
-* **Featured Games:**
-    * **🕵️‍♂️ Spy:** A social deduction game with hidden roles distributed via DMs and case-insensitive guessing.
-    * **🔫 Russian Roulette:** Features real-time drum mechanics and turn-based PvP/AI modes.
-    * **🕹️ Classics:** Fully interactive Tic-Tac-Toe and Hangman sessions.
-
----
-
-### 🛡️ Core Reliability and UX
-
-* **🎭 Reaction Roles:** A modular high-performance role distribution system via customized embed messages and server-side reaction listeners.
-* **🧹 Role Hygiene:** An automated system for cleaning up level-up rewards, ensuring users maintain a clean profile with only their highest earned level.
-* **🚀 Latency Resolution:** Optimized internal network routing via IPv4 (127.0.0.1) for zero-latency audio playback.
+### 🎮 Multiplayer Minigames & Systems
+Robust platform for social interaction and ranking.
 
 <p align="center">
-  <img src="docs/emoji.png" width="75%" alt="Reaction Roles Showcase" style="border-radius: 10px; border: 1px solid #555;">
-  <br><em>Reaction Roles module with emoji-based selection.</em>
+  <img src="docs/minigames_menu.png" width="45%" alt="Minigames Menu">
+  <img src="docs/leaderboard_menu.png" width="45%" alt="Leaderboard">
 </p>
+
+* **Global Ranking:** SQLite/GORM powered Top-10 leaderboards.
+* **Featured Games:** Spy, Russian Roulette, Tic-Tac-Toe, and Hangman.
+
+---
+
+### 🛡️ Server Management & Tools
+Automated role distribution and server health utilities.
+
+<p align="center">
+  <img src="docs/admin_menu.png" width="45%" alt="Admin Menu">
+  <img src="docs/emoji.png" width="45%" alt="Reaction Roles">
+</p>
+
+* **🎭 Reaction Roles:** High-performance, modular role distribution.
+* **🧹 Role Hygiene:** Automated cleanup of redundant level roles.
 
 ---
 
 ## 🏗️ Project Architecture
-
-The project follows a clean, domain-driven structure to ensure maintainability:
 
 ```text
 ├── cmd/bot/                # Application entry point (main.go)
@@ -90,11 +102,11 @@ The project follows a clean, domain-driven structure to ensure maintainability:
 
 ## 🛠️ Tech Stack
 
-* **Language:** Go (Golang) — chosen for its superior concurrency primitives.
-* **🤖 API Wrapper:** Disgo.
-* **💾 Database:** SQLite with GORM (Object-Relational Mapping).
-* **🎨 Graphics:** fogleman/gg (Pure Go 2D rendering).
-* **🎵 Audio:** Lavalink integration for high-quality streaming.
+* **Language:** Go (Golang)
+* **🤖 API Wrapper:** Disgo
+* **💾 Database:** SQLite + GORM
+* **🎨 Graphics:** fogleman/gg (Pure Go)
+* **🎵 Audio:** Lavalink Integration
 
 ---
 
